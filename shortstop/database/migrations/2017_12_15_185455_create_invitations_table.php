@@ -14,10 +14,10 @@ class CreateInvitationsTable extends Migration
     public function up()
     {
         Schema::create('invitations', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->increments('id');
             $table->string('email')->unique();
             $table->string('invitation_token', 32)->unique()->nullable();
-            $table->timestamp('registered_at')->nullable();
+            $table->timestamp('registered_at')->nullable()->default(null);
             $table->timestamps();
         });
     }
