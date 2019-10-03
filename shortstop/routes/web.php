@@ -20,7 +20,6 @@ Auth::routes();
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/', function () {
         if (Auth::user()->role == 'admin')
-            //return redirect('admin');
             return view('admin');
         elseif (Auth::user()->role == 'player')
             return view('profile');
