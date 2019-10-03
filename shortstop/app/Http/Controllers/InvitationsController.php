@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreInvitationRequest;
+use App\Invitation;
 use Illuminate\Http\Request;
 
 class InvitationsController extends Controller

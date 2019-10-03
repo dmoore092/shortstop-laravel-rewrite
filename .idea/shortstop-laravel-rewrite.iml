@@ -1,7 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="WEB_MODULE" version="4">
   <component name="NewModuleRootManager">
-    <content url="file://$MODULE_DIR$" />
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/shortstop/vendor/beyondcode/laravel-dump-server" />
+      <excludeFolder url="file://$MODULE_DIR$/shortstop/vendor/dragonmantank/cron-expression" />
+      <excludeFolder url="file://$MODULE_DIR$/shortstop/vendor/nunomaduro/collision" />
+      <excludeFolder url="file://$MODULE_DIR$/shortstop/vendor/opis/closure" />
+      <excludeFolder url="file://$MODULE_DIR$/shortstop/vendor/phpoption/phpoption" />
+      <excludeFolder url="file://$MODULE_DIR$/shortstop/vendor/symfony/event-dispatcher-contracts" />
+      <excludeFolder url="file://$MODULE_DIR$/shortstop/vendor/symfony/mime" />
+      <excludeFolder url="file://$MODULE_DIR$/shortstop/vendor/symfony/polyfill-ctype" />
+      <excludeFolder url="file://$MODULE_DIR$/shortstop/vendor/symfony/polyfill-iconv" />
+      <excludeFolder url="file://$MODULE_DIR$/shortstop/vendor/symfony/polyfill-intl-idn" />
+      <excludeFolder url="file://$MODULE_DIR$/shortstop/vendor/symfony/polyfill-php72" />
+      <excludeFolder url="file://$MODULE_DIR$/shortstop/vendor/symfony/polyfill-php73" />
+      <excludeFolder url="file://$MODULE_DIR$/shortstop/vendor/symfony/service-contracts" />
+      <excludeFolder url="file://$MODULE_DIR$/shortstop/vendor/symfony/translation-contracts" />
+    </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
