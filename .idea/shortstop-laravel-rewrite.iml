@@ -2,6 +2,7 @@
 <module type="WEB_MODULE" version="4">
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
+<<<<<<< HEAD
       <excludeFolder url="file://$MODULE_DIR$/shortstop/vendor/beyondcode/laravel-dump-server" />
       <excludeFolder url="file://$MODULE_DIR$/shortstop/vendor/dragonmantank/cron-expression" />
       <excludeFolder url="file://$MODULE_DIR$/shortstop/vendor/nunomaduro/collision" />
@@ -16,6 +17,10 @@
       <excludeFolder url="file://$MODULE_DIR$/shortstop/vendor/symfony/polyfill-php73" />
       <excludeFolder url="file://$MODULE_DIR$/shortstop/vendor/symfony/service-contracts" />
       <excludeFolder url="file://$MODULE_DIR$/shortstop/vendor/symfony/translation-contracts" />
+=======
+      <sourceFolder url="file://$MODULE_DIR$/shortstop/app" isTestSource="false" packagePrefix="App\" />
+      <sourceFolder url="file://$MODULE_DIR$/shortstop/tests" isTestSource="true" packagePrefix="Tests\" />
+>>>>>>> cc1454f687f59c57497e1841fd2422032e256a12
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

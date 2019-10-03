@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Invitation;
 use App\User;
+use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 
@@ -41,6 +42,15 @@ class RegisterController extends Controller
     }
 
     /**
+     * Request invitation form.
+     *
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function requestInvitation() {
+        return view('auth.request');
+    }
+
+    /**
      * Get a validator for an incoming registration request.
      *
      * @param  array  $data
@@ -49,10 +59,9 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'registration-code' => ['required', 'string', 'max:255'],
-            'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'email'     => 'required|string|email|max:255|unique:users|exists:invitations,email',
+            'name'      => 'required|string|max:255',
+            'password'  => 'required|string|min:6|confirmed',
         ]);
     }
 
@@ -65,17 +74,38 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
         return User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => Hash::make($data['password']),
+            'name'      => $data['name'],
+            'email'     => $data['email'],
+            'password'  => bcrypt($data['password']),
+            'role_id'   => 2
         ]);
     }
 
     /**
-     * Send email invite for new user
+     * Override the application registration form. Get the email that has been associated with the invitation and
+     * pass it to the view.
      *
+     * @param \Illuminate\Http\Request $request
+     * @return \Illuminate\Http\Response
      */
-    public function requestInvitation() {
-        return view('auth.request');
+    public function showRegistrationForm(Request $request)
+    {
+        $invitation_token = $request->get('invitation_token');
+        $invitation = Invitation::where('invitation_token', $invitation_token)->firstOrFail();
+        $email = $invitation->email;
+
+        return view('auth.register', compact('email'));
+    }
+
+    /**
+     * After user registered, update the invitation registered_at.
+     *
+     * @param $user
+     */
+    public function registered(Request $request, $user)
+    {
+        $invitation = Invitation::where('email', $user->email)->firstOrFail();
+        $invitation->registered_at = $user->created_at;
+        $invitation->save();
     }
 }
