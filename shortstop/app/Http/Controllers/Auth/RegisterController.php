@@ -100,7 +100,6 @@ class RegisterController extends Controller
     /**
      * After user registered, update the invitation registered_at.
      *
-     * @param Request $request
      * @param $user
      */
     public function registered(Request $request, $user)

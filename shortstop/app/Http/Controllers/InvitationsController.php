@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreInvitationRequest;
 use App\Invitation;
 use Illuminate\Http\Request;
+use App\Mail\InvitationCreated;
+use Illuminate\Support\Facades\Mail;
 
 class InvitationsController extends Controller
 {
@@ -30,6 +32,9 @@ class InvitationsController extends Controller
         $invitation = new Invitation($request->all());
         $invitation->generateInvitationToken();
         $invitation->save();
+
+        // send the email
+        Mail::to($request->get('email'))->send(new InvitationCreated($invitation));
 
         return redirect()->route('requestInvitation')
             ->with('success', 'Invitation to register successfully requested. Please wait for registration link.');
