@@ -11,22 +11,22 @@
                 @if (!empty($invitations))
                     <table class="table table-responsive table-striped" style="margin-bottom: 0">
                         <thead>
-                            <tr>
-                                <th>Email</th>
-                                <th>Created At</th>
-                                <th>Invitation Link</th>
-                            </tr>
+                        <tr>
+                            <th>Email</th>
+                            <th>Created At</th>
+                            <th>Invitation Link</th>
+                        </tr>
                         </thead>
                         <tbody>
-                            @foreach ($invitations as $invitation)
-                                <tr>
-                                    <td><a href="mailto:{{ $invitation->email }}">{{ $invitation->email }}</a></td>
-                                    <td>{{ $invitation->created_at }}</td>
-                                    <td>
-                                        <kbd>{{ $invitation->getLink() }}</kbd>
-                                    </td>
-                                </tr>
-                            @endforeach
+                        @foreach ($invitations as $invitation)
+                            <tr>
+                                <td><a href="mailto:{{ $invitation->email }}">{{ $invitation->email }}</a></td>
+                                <td>{{ $invitation->created_at }}</td>
+                                <td>
+                                    <kbd>{{ $invitation->getLink() }}</kbd>
+                                </td>
+                            </tr>
+                        @endforeach
                         </tbody>
                     </table>
                 @else

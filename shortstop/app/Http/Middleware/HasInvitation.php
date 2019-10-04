@@ -1,20 +1,14 @@
 <?php
-
 namespace App\Http\Middleware;
 
 use App\Invitation;
 use Closure;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 
+
 class HasInvitation
 {
-    /**
-     * Handle an incoming request.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \Closure  $next
-     * @return mixed
-     */
+
     public function handle($request, Closure $next)
     {
         /**
@@ -23,7 +17,7 @@ class HasInvitation
         if ($request->isMethod('get')) {
 
             /**
-             * No token = Good bye.
+             * No token = Goodbye.
              */
             if (!$request->has('invitation_token')) {
                 return redirect(route('requestInvitation'));
@@ -43,7 +37,7 @@ class HasInvitation
             }
 
             /**
-             * Lets check if users already registered.
+             * Let's check if users already registered.
              * If yes -> redirect to login with error.
              */
             if (!is_null($invitation->registered_at)) {

@@ -69,26 +69,13 @@
       <path value="$PROJECT_DIR$/shortstop/vendor/phpunit/php-timer" />
       <path value="$PROJECT_DIR$/shortstop/vendor/phpunit/php-token-stream" />
       <path value="$PROJECT_DIR$/shortstop/vendor/phpunit/phpunit" />
-      <path value="$PROJECT_DIR$/shortstop/vendor/dragonmantank/cron-expression" />
-      <path value="$PROJECT_DIR$/shortstop/vendor/opis/closure" />
-      <path value="$PROJECT_DIR$/shortstop/vendor/phpoption/phpoption" />
-      <path value="$PROJECT_DIR$/shortstop/vendor/nunomaduro/collision" />
-      <path value="$PROJECT_DIR$/shortstop/vendor/symfony/polyfill-intl-idn" />
-      <path value="$PROJECT_DIR$/shortstop/vendor/symfony/service-contracts" />
-      <path value="$PROJECT_DIR$/shortstop/vendor/symfony/polyfill-iconv" />
-      <path value="$PROJECT_DIR$/shortstop/vendor/symfony/polyfill-ctype" />
-      <path value="$PROJECT_DIR$/shortstop/vendor/symfony/mime" />
-      <path value="$PROJECT_DIR$/shortstop/vendor/symfony/polyfill-php72" />
-      <path value="$PROJECT_DIR$/shortstop/vendor/symfony/translation-contracts" />
-      <path value="$PROJECT_DIR$/shortstop/vendor/symfony/event-dispatcher-contracts" />
-      <path value="$PROJECT_DIR$/shortstop/vendor/symfony/polyfill-php73" />
       <path value="$PROJECT_DIR$/shortstop/vendor/beyondcode/laravel-dump-server" />
       <path value="$PROJECT_DIR$/shortstop/vendor/symfony/polyfill-php70" />
       <path value="$PROJECT_DIR$/shortstop/vendor/mtdowling/cron-expression" />
       <path value="$PROJECT_DIR$/shortstop/vendor/phpunit/phpunit-mock-objects" />
     </include_path>
   </component>
-  <component name="PhpProjectSharedConfiguration" php_language_level="7" />
+  <component name="PhpProjectSharedConfiguration" php_language_level="7.2" />
   <component name="PhpUnit">
     <phpunit_settings>
       <PhpUnitSettings load_method="CUSTOM_LOADER" custom_loader_path="$PROJECT_DIR$/shortstop/vendor/autoload.php" />
