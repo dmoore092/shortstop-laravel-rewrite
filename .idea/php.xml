@@ -83,6 +83,9 @@
       <path value="$PROJECT_DIR$/shortstop/vendor/symfony/event-dispatcher-contracts" />
       <path value="$PROJECT_DIR$/shortstop/vendor/symfony/polyfill-php73" />
       <path value="$PROJECT_DIR$/shortstop/vendor/beyondcode/laravel-dump-server" />
+      <path value="$PROJECT_DIR$/shortstop/vendor/symfony/polyfill-php70" />
+      <path value="$PROJECT_DIR$/shortstop/vendor/mtdowling/cron-expression" />
+      <path value="$PROJECT_DIR$/shortstop/vendor/phpunit/phpunit-mock-objects" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7" />
